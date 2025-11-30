@@ -1,0 +1,53 @@
+{
+    "books": {
+        "book1": {
+            "name": "Book Title",
+            "description": "Book description",
+            "image": "./images/books/book1.png",
+            "price": 100,
+            "rating": 4.5,
+            "reviews": [
+                {
+                    "user": "mahmoud",
+                    "rating": 4,
+                    "description": "very nice book, you should read it."
+                },
+                {
+                    "user": "aly",
+                    "rating": 1,
+                    "description": "very bad book, don't read."
+                }
+            ],
+            "author": "author1"
+        },
+        "book2": {
+            "name": "Book 2 Title",
+            "description": "Book 2 description",
+            "image": "./images/books/book2.png",
+            "price": 140,
+            "rating": 3.8,
+            "reviews": [
+                {
+                    "user": "mahmoud",
+                    "rating": 4,
+                    "description": "very nice book, you should read it."
+                },
+                {
+                    "user": "aly",
+                    "rating": 1,
+                    "description": "very bad book, don't read."
+                }
+            ],
+            "author": "author1"
+        }
+    },
+    "authors": {
+        "author1": {
+            "name": "Ahmed",
+            "age": 45,
+            "books": [
+                "book1", "book2"
+            ]
+        }
+    }
+}
