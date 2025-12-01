@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+
+<style>
+    body {
+        font-family: Inter, "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Arial, sans-serif;
+
+        box-sizing: border-box;
+
+        background-color: dodgerblue;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    h1 {
+        font-weight: 800;
+    }
+
+    button {
+        font-weight: 800;
+        font-size: 1rem;
+        color: white;
+
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 99999px;
+
+        padding: .5rem 1.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: blueviolet;
+
+        transition: background .15s, border-color .15s;
+    }
+
+    button:hover {
+        cursor: pointer;
+
+        border-color: white;
+
+        background-color: violet;
+
+        transition: background .15s, border-color .15s;
+    }
+
+    #cart button.add,
+    #cart button.subtract {
+        padding: .5rem .85rem;
+
+        font-family: monospace;
+    }
+
+    #cart {
+        width: 75%;
+
+        margin-bottom: 2rem;
+    }
+
+    #cart .item {
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 1rem;
+
+        padding: 1rem;
+        margin: 1rem 0;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        background-color: fuchsia;
+    }
+
+    #cart .item img {
+        width: 80px;
+        height: 80px;
+
+        object-fit: cover;
+        border: 3px solid black;
+        border-radius: .5rem;
+    }
+
+    #cart .item .info {
+        flex: 1;
+
+        font-size: 1.25rem;
+        font-weight: 800;
+    }
+
+    #cart .item .info .price {
+        font-weight: 700;
+
+    }
+
+    #cart .item .amount {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: white;
+    }
+
+    #cart .item .amount p {
+        width: 3rem;
+        text-align: center;
+    }
+
+    p#total {
+        font-size: 1.15rem;
+        font-weight: 800;
+    }
+
+    form#checkout {
+        display: none;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        min-width: 75vw;
+        min-height: 50vh;
+
+        background-color: cornflowerblue;
+
+        padding: 2rem;
+
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 2rem;
+    }
+
+    form#checkout button.close {
+        align-self: start;
+
+        padding: .5rem .85rem;
+
+        transform: translate(-.75rem, -.75rem);
+    }
+
+    input,
+    select {
+        font-size: 1.1rem;
+        font-weight: 700;
+
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 99999px;
+
+        height: 1.75rem;
+
+        padding: 0 1rem;
+    }
+
+    select {
+        font-size: 1rem;
+
+        height: 2.5rem;
+
+        padding: .5rem;
+    }
+
+    select:hover {
+        cursor: pointer;
+    }
+
+    label {
+        font-size: 1.1rem;
+        font-weight: 800;
+
+        margin-bottom: .5rem;
+    }
+</style>
+
+<body>
+    <script src="../scripts/cart.js" type="module"></script>
+    <h1>YOUR CART</h1>
+    <div id="cart"></div>
+    <button id="buy-now">BUY NOW</button>
+    <form id="checkout">
+        <button class="close">✕</button>
+
+        <label for="name">NAME:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="address">ADDRESS:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="city">CITY:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="payment">PAYMENT METHOD:</label>
+        <select id="payment" name="payment" required>
+            <option value="">Select...</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="cash">Cash</option>
+        </select><br>
+
+        <label for="card-number" id="card-label" style="display:none;">CARD NUMBER:</label>
+        <input type="text" id="card-number" name="card-number" style="display:none;"><br>
+
+        <button type="submit">COMPLETE PAYMENT</button>
+
+        <script>
+            const paymentSelect = document.getElementById('payment')
+            const cardLabel = document.getElementById('card-label')
+            const cardInput = document.getElementById('card-number')
+
+            paymentSelect.addEventListener('change', () => {
+                if (paymentSelect.value === 'credit-card') {
+                    cardLabel.style.display = 'inline'
+                    cardInput.style.display = 'inline'
+                } else {
+                    cardLabel.style.display = 'none'
+                    cardInput.style.display = 'none'
+                }
+            })
+        </script>
+        <script>
+            const buyNowButton = document.getElementById('buy-now')
+            const checkoutForm = document.getElementById('checkout')
+            const closeButton = document.querySelector('#checkout .close')
+
+            buyNowButton.addEventListener('click', () => {
+                checkoutForm.style.display = 'flex'
+            })
+
+            closeButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                checkoutForm.style.display = 'none'
+            })
+        </script>
+    </form>
+</body>
+
+</html>
