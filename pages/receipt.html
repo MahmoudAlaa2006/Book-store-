@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+</head>
+
+<style>
+    body {
+        font-family: Inter, "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Arial, sans-serif;
+
+        box-sizing: border-box;
+
+        background-color: dodgerblue;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100vh;
+
+        margin: 0;
+    }
+
+    p {
+        margin: 0.5rem 0;
+    }
+
+    h1 {
+        font-weight: 800;
+    }
+
+    button {
+        font-weight: 800;
+        font-size: 1rem;
+        color: white;
+
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 99999px;
+
+        padding: .5rem 1.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: blueviolet;
+
+        transition: background .15s, border-color .15s;
+    }
+
+    button:hover {
+        cursor: pointer;
+
+        border-color: white;
+
+        background-color: violet;
+
+        transition: background .15s, border-color .15s;
+    }
+
+    #receipt-container {
+        width: 75%;
+        max-width: 500px;
+
+        background-color: gold;
+
+        padding: 2rem;
+
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 2rem;
+
+        text-align: center;
+    }
+
+    .receipt-section {
+        border: solid black;
+        border-width: 3px 5px 5px 3px;
+        border-radius: 0.5rem;
+
+        padding: 1rem;
+        margin: 1rem 0;
+
+        background-color: fuchsia;
+    }
+
+    .receipt-section label {
+        font-weight: 800;
+
+        display: block;
+
+        margin-bottom: 0.25rem;
+    }
+
+    .receipt-section p {
+        font-size: 1.1rem;
+
+        margin: 0;
+    }
+
+    #ok-button {
+        margin-top: 2rem;
+    }
+</style>
+
+<body>
+    <h1>RECEIPT</h1>
+    <div id="receipt-container">
+        <div class="receipt-section">
+            <label>NAME</label>
+            <p id="receipt-name"></p>
+        </div>
+
+        <div class="receipt-section">
+            <label>ADDRESS</label>
+            <p id="receipt-address"></p>
+        </div>
+
+        <div class="receipt-section">
+            <label>CITY</label>
+            <p id="receipt-city"></p>
+        </div>
+
+        <div class="receipt-section">
+            <label>PAYMENT METHOD</label>
+            <p id="receipt-payment"></p>
+        </div>
+
+        <div class="receipt-section">
+            <label>TOTAL</label>
+            <p id="receipt-total"></p>
+        </div>
+
+        <button id="ok-button">OK</button>
+    </div>
+
+    <script>
+        const name = sessionStorage.getItem('receipt-name') || 'N/A'
+        const address = sessionStorage.getItem('receipt-address') || 'N/A'
+        const city = sessionStorage.getItem('receipt-city') || 'N/A'
+        const payment = sessionStorage.getItem('receipt-payment') || 'N/A'
+        const total = sessionStorage.getItem('receipt-total') || 'N/A'
+
+        document.getElementById('receipt-name').textContent = name
+        document.getElementById('receipt-address').textContent = address
+        document.getElementById('receipt-city').textContent = city
+        document.getElementById('receipt-payment').textContent = payment
+        document.getElementById('receipt-total').textContent = total
+
+        document.getElementById('ok-button').addEventListener('click', () => {
+            sessionStorage.clear()
+            window.location.href = '../pages/home.html'
+        })
+    </script>
+</body>
+
+</html>

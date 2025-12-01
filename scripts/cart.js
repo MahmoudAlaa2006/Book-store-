@@ -32,7 +32,9 @@ function renderCart() {
 
     const ids = Object.keys(cart)
     if (ids.length === 0) {
-        cartDiv.textContent = 'Cart is empty'
+        cartDiv.innerHTML = `
+        <p>Cart is empty</p>
+        `
         return
     }
 
@@ -99,3 +101,8 @@ export function subtractFromCart(bookId) {
 window.subtractFromCart = subtractFromCart
 
 loadGlobal()
+
+addToCart("book1")
+addToCart("book2")
+addToCart("book3")
+addToCart("book4")
