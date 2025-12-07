@@ -6,6 +6,7 @@
             "genre": [
                 "trending",
                 "horror",
+                "drama",
                 "high-rated"
             ],
             "image": "/assets/images/books/1919.jpg",
@@ -14,14 +15,14 @@
             "reviews": [
                 {
                     "user": "mahmoudalaa",
-                    "userImage": "/assets/images/users/mahmoudalaa.jpg",
+                    "userImage": "/assets/images/default_user.jpg",
                     "rating": 4,
                     "description": "very nice book, you should read it.",
                     "likes": 42
                 },
                 {
                     "user": "loai",
-                    "userImage": "/assets/images/users/loai.jpg",
+                    "userImage": "/assets/images/default_user.jpg",
                     "rating": 1,
                     "description": "very bad book, don't read.",
                     "likes": 5
@@ -30,73 +31,283 @@
             "author": "ahmed_mourad"
         },
         "book2": {
-            "name": "1919",
-            "description": "A book description",
-            "genre": [
-                "trending",
-                "drama",
-                "high-rated"
-            ],
-            "image": "/assets/images/books/1919.png",
-            "price": 140,
-            "rating": 4.5,
-            "reviews": [
-                {
-                    "user": "mahmoudalaa",
-                    "userImage": "/assets/images/users/mahmoudalaa.jpg",
-                    "rating": 4,
-                    "description": "very nice book, you should read it.",
-                    "likes": 28
-                },
-                {
-                    "user": "loai",
-                    "userImage": "/assets/images/users/loai.jpg",
-                    "rating": 1,
-                    "description": "very bad book, don't read.",
-                    "likes": 3
-                }
-            ],
-            "author": "ahmed_mourad"
-        },
-        "book3": {
-            "name": "1919",
+            "name": "The Witcher",
             "description": "A book description",
             "genre": [
                 "trending",
                 "fantasy",
+                "horror",
                 "high-rated"
             ],
-            "image": "/assets/images/books/1919.png",
+            "image": "/assets/images/books/the witcher.jpg",
+            "price": 90,
+            "rating": 3.8,
+            "reviews": [
+                {
+                    "user": "alyshukry",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 4,
+                    "description": "Very nice book and very nice game.",
+                    "likes": 28
+                },
+                {
+                    "user": "mohamed",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 4,
+                    "description": "I liked the ending",
+                    "likes": 3
+                },
+                {
+                    "user": "omar",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 3,
+                    "description": "Wouldn't recommend reading this",
+                    "likes": 23
+                }
+            ],
+            "author": "andrzej_sapkowski"
+        },
+        "book3": {
+            "name": "A Game of Thrones",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "horror",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/a game of thrones.jpg",
             "price": 140,
             "rating": 4.5,
             "reviews": [
                 {
-                    "user": "mahmoudalaa",
-                    "userImage": "/assets/images/users/mahmoudalaa.jpg",
+                    "user": "ahmed",
+                    "userImage": "/assets/images/default_user.jpg",
                     "rating": 4,
                     "description": "very nice book, you should read it.",
-                    "likes": 67
-                },
-                {
-                    "user": "loai",
-                    "userImage": "/assets/images/users/loai.jpg",
-                    "rating": 1,
-                    "description": "very bad book, don't read.",
-                    "likes": 12
+                    "likes": 57
                 }
             ],
-            "author": "ahmed_mourad"
+            "author": "george_martin"
+        },
+        "book4": {
+            "name": "Holly",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "horror",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/holly.jpg",
+            "price": 120,
+            "rating": 4.5,
+            "reviews": [
+                {
+                    "user": "abdelrahman",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 3,
+                    "description": "not worth buying",
+                    "likes": 27
+                }
+            ],
+            "author": "stephen_king"
+        },
+        "book5": {
+            "name": "Harry Potter and The Chamber of Secrets",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/harry potter and the chamber of secrets.jpg",
+            "price": 135,
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "user": "mahmoud",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 5,
+                    "description": "Best series ever!",
+                    "likes": 45
+                }
+            ],
+            "author": "jk_rowling"
+        },
+        "book6": {
+            "name": "Harry Potter and The Deathly Hallows",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/harry potter and the deathly hallows.jpg",
+            "price": 135,
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "user": "amr",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 5,
+                    "description": "You should buy this book",
+                    "likes": 45
+                },
+                {
+                    "user": "hassan",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 5,
+                    "description": "i love harry potter",
+                    "likes": 10
+                }
+            ],
+            "author": "jk_rowling"
+        },
+        "book7": {
+            "name": "Harry Potter and The Half Blood Prince",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/harry potter and the half blod prince.jpg",
+            "price": 135,
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "user": "moayad",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 5,
+                    "description": "love this book!",
+                    "likes": 21
+                }
+            ],
+            "author": "jk_rowling"
+        },
+        "book8": {
+            "name": "Harry Potter and The Sorcerer's Stone",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "horror",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/harry potter and the sorcerers stone.jpg",
+            "price": 135,
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "user": "khaled",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 5,
+                    "description": "love this book!",
+                    "likes": 21
+                }
+            ],
+            "author": "jk_rowling"
+        },
+        "book9": {
+            "name": "IT",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "horror",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/it.gif",
+            "price": 95,
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "user": "sara",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 4,
+                    "description": "nice book",
+                    "likes": 23
+                }
+            ],
+            "author": "stephen_king"
+        },
+        "book10": {
+            "name": "Misery",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "drama",
+                "horror",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/it.gif",
+            "price": 100,
+            "rating": 4.8,
+            "reviews": [
+                {
+                    "user": "malak",
+                    "userImage": "/assets/images/default_user.jpg",
+                    "rating": 5,
+                    "description": "Finished this in two days only",
+                    "likes": 54
+                }
+            ],
+            "author": "stephen_king"
         }
     },
     "authors": {
         "ahmed_mourad": {
             "name": "Ahmed Mourad",
             "age": 45,
-            "image": "/assets/images/authors/ahmed_mourad.jpg",
+            "image": "/assets/images/default_user.jpg",
             "books": [
-                "book1",
-                "book2",
+                "book1"
+            ]
+        },
+        "andrzej_sapkowski": {
+            "name": "Andrzej Sapkowski",
+            "age": 32,
+            "image": "/assets/images/default_user.jpg",
+            "books": [
+                "book2"
+            ]
+        },
+        "george_martin": {
+            "name": "George R. R. Martin",
+            "age": 53,
+            "image": "/assets/images/default_user.jpg",
+            "books": [
                 "book3"
+            ]
+        },
+        "jk_rowling": {
+            "name": "JK Rowling",
+            "age": 55,
+            "image": "/assets/images/default_user.jpg",
+            "books": [
+                "book5",
+                "book6",
+                "book7",
+                "book8"
+            ]
+        },
+        "stephen_king": {
+            "name": "Stephen King",
+            "age": 68,
+            "image": "/assets/images/default_user.jpg",
+            "books": [
+                "book9",
+                "book4",
+                "book10"
             ]
         }
     }
