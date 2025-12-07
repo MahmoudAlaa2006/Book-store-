@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <div class="navbar_container">
+             <div class="logo_container">
+                 <h1 class="logo">BookStore</h1>
+             </div>
+             <div class="menu_container">
+                 <ul class="menu_list">
+                    <li> <a href="../docs/index.html" class="menu_list_item">Home</a></li>
+                     <li> <a href="#" class="menu_list_item">Zeid</a></li>
+                     <li> <a href="#" class="menu_list_item">Ebed</a></li>
+                     <li> <a href="#" class="menu_list_item">Ntat</a></li>
+                     <li> <a href="#" class="menu_list_item">El7eet</a></li>
+                 </ul>
+                 <div class="search">
+                     <form action="" class="search">
+                         <input type="text" class="search_input" placeholder="  search...">
+                     </form>
+                  </div>
+              </div>
+             <div class="log_in">
+                <a href="login.html"> <button  type="button" class="log_in_button">Log in</button></a>
+             </div>
+         </div>
+       </div> 
+     </header>
+
+    <main class="main-content">
+        <div class="wrapper">
+            <div class="form-header">
+                <div class="titles">
+                    <div class="title-login">LOGIN</div>
+                </div>
+                <button class="close-btn">✕</button>
+            </div>
+            <form id="loginForm" action="/login" method="POST" class="login-form" autocomplete="on">
+                <div class="welcome-text">Welcome Back</div>
+                <div class="input-box">
+                    <input  class="input-field" id="log-email" required>
+                    <label for="log-email" class="label">Username</label>
+                    <i class='bx bx-user icon'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" id="log-pass" required>
+                    <label for="log-pass" class="label">Password</label>
+                    <i class='bx bx-lock-alt icon'></i>
+                </div>
+                <div class="input-box">
+                   <button type="submit" class="btn-submit" id="SignInBtn">Sign In</button>
+                </div>
+                <div class="switch-form">
+                    <span>Don't have an account? <a class="reg" href="register.html">Register</a></span>
+                </div>
+            </form>
+        </div>
+    </main>
+<!--
+    <div class="social_icons">
+        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+      </div>
+      <div class="footer_nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Our Team</a></li>
+          <li class="contact_us"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+  <footer>
+    <p>Copyright © 2025; Designed by <span class="designer">Mahmoud_Alaa Mahmoud_Abdel3aty Mahmoud_sherif<br>Mohamed_abdelhamed Mohamed_elsaid Mazen_Elshamy<br>Loay_hossam Youssef_karam Youssef_Morqus</span></p>
+  </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('log-email').value;
+        const password = document.getElementById('log-pass').value;
+
+        if (email === '' ) {
+            alert('Please enter email');
+        }  
+        else if (!email.includes('@')) {
+            alert('Invalid email. It must contain "@".');
+        }
+        else if(password === ''){
+            alert('Please enter  password.');
+        }
+        else {
+            document.getElementById('log-email').value = '';
+            document.getElementById('log-pass').value = '';
+            alert('Login Success');
+        }
+    });
+    </script>
+</body>
+</html>
+-->
