@@ -14,11 +14,6 @@ async function loadGlobal() {
     }
 }
 
-function resolveImagePath(imgPath) {
-    // global.json uses paths relative to itself, so make them relative to pages/cart.html
-    return '../assets/' + imgPath.replace(/^(\.\/)+/, '')
-}
-
 function renderCart() {
     const cartDiv = document.getElementById('cart')
     if (!cartDiv) return
@@ -43,7 +38,7 @@ function renderCart() {
         if (!book) return ''
 
         const quantity = cart[bookId] || 0
-        const imgSrc = resolveImagePath(book.image || '')
+        const imgSrc = book.image
         const bookName = book.name || bookId
         const price = book.price ?? 0
 
