@@ -101,8 +101,3 @@ export function subtractFromCart(bookId) {
 window.subtractFromCart = subtractFromCart
 
 loadGlobal()
-
-addToCart("book1")
-addToCart("book2")
-addToCart("book3")
-addToCart("book4")

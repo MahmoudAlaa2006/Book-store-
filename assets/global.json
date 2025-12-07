@@ -1,93 +1,87 @@
 {
     "books": {
         "book1": {
-            "name": "Book Title",
-            "description": "Book description",
-            "image": "./images/books/book1.png",
-            "price": 100,
+            "name": "1919",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "horror",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/1919.jpg",
+            "price": 140,
             "rating": 4.5,
             "reviews": [
                 {
-                    "user": "mahmoud",
+                    "user": "mahmoudalaa",
                     "rating": 4,
                     "description": "very nice book, you should read it."
                 },
                 {
-                    "user": "aly",
+                    "user": "loai",
                     "rating": 1,
                     "description": "very bad book, don't read."
                 }
             ],
-            "author": "author1"
-        },
-        "book4": {
-            "name": "Book Title",
-            "description": "Book description",
-            "image": "./images/books/book1.png",
-            "price": 100,
-            "rating": 4.5,
-            "reviews": [
-                {
-                    "user": "mahmoud",
-                    "rating": 4,
-                    "description": "very nice book, you should read it."
-                },
-                {
-                    "user": "aly",
-                    "rating": 1,
-                    "description": "very bad book, don't read."
-                }
-            ],
-            "author": "author1"
-        },
-        "book3": {
-            "name": "Book Title",
-            "description": "Book description",
-            "image": "./images/books/book1.png",
-            "price": 100,
-            "rating": 4.5,
-            "reviews": [
-                {
-                    "user": "mahmoud",
-                    "rating": 4,
-                    "description": "very nice book, you should read it."
-                },
-                {
-                    "user": "aly",
-                    "rating": 1,
-                    "description": "very bad book, don't read."
-                }
-            ],
-            "author": "author1"
+            "author": "ahmed_mourad"
         },
         "book2": {
-            "name": "Book 2 Title",
-            "description": "Book 2 description",
-            "image": "./images/books/book2.png",
+            "name": "1919",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "drama",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/1919.png",
             "price": 140,
-            "rating": 3.8,
+            "rating": 4.5,
             "reviews": [
                 {
-                    "user": "mahmoud",
+                    "user": "mahmoudalaa",
                     "rating": 4,
                     "description": "very nice book, you should read it."
                 },
                 {
-                    "user": "aly",
+                    "user": "loai",
                     "rating": 1,
                     "description": "very bad book, don't read."
                 }
             ],
-            "author": "author1"
+            "author": "ahmed_mourad"
+        },
+        "book3": {
+            "name": "1919",
+            "description": "A book description",
+            "genre": [
+                "trending",
+                "fantasy",
+                "high-rated"
+            ],
+            "image": "/assets/images/books/1919.png",
+            "price": 140,
+            "rating": 4.5,
+            "reviews": [
+                {
+                    "user": "mahmoudalaa",
+                    "rating": 4,
+                    "description": "very nice book, you should read it."
+                },
+                {
+                    "user": "loai",
+                    "rating": 1,
+                    "description": "very bad book, don't read."
+                }
+            ],
+            "author": "ahmed_mourad"
         }
     },
     "authors": {
-        "author1": {
-            "name": "Ahmed",
+        "ahmed_mourad": {
+            "name": "Ahmed Mourad",
             "age": 45,
             "books": [
-                "book1",
-                "book2"
+                "book1"
             ]
         }
     }
