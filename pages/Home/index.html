@@ -233,8 +233,10 @@
     </main>
 
     <script src="home.js"></script>
-    
-    <script>
+    <script type="module">
+        // Import addToCart function
+        import { addToCart } from '../../scripts/cart.js';
+        
         // Inline script to load books from global.json
         fetch('../../assets/global.json')
             .then(response => response.json())
@@ -256,6 +258,9 @@
                         <p>${book.price}</p>
                         <button>Add to Cart</button>
                     `;
+                    
+                    const button = card.querySelector('button');
+                    button.addEventListener('click', () => addToCart(bookId));
                     
                     return card;
                 }

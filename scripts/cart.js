@@ -66,6 +66,7 @@ function renderCart() {
     const total = ids.reduce((sum, bookId) => {
         const book = globalData.books?.[bookId]
         const quantity = cart[bookId] || 0
+        if (!book) return sum
         return sum + (book.price ?? 0) * quantity
     }, 0)
 
@@ -75,6 +76,7 @@ function renderCart() {
 }
 
 export function addToCart(bookId) {
+    console.log(bookId)
     if (cart[bookId]) {
         cart[bookId]++
     } else {
