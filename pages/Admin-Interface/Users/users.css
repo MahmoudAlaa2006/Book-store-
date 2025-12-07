@@ -1,0 +1,10 @@
+body {
+    background-color: #FAF0B8 !important;
+}
+
+.card {
+    margin: 10% 10%;
+    box-shadow:
+        6px 6px 0px #000,
+        0px 0px 0px 3px #000 inset !important;
+}

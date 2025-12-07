@@ -1,0 +1,22 @@
+body {
+    background-color: #FAF0B8 !important;
+}
+
+.card {
+    margin: 5% 5%;
+    box-shadow:
+        6px 6px 0px #000,
+        0px 0px 0px 3px #000 inset !important;
+}
+
+.card img {
+    transition: all ease 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.01);
+}
+
+#admin-container {
+    margin-left: 19.5% !important;
+}
