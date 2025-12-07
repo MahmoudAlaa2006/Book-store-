@@ -248,19 +248,30 @@
                     const card = document.createElement('div');
                     card.className = 'book-card';
                     card.id = bookId;
+                    card.style.cursor = 'pointer';
                     
-                    // Fix the image path - remove ./ and add correct relative path
-                    const imagePath = book.image.replace('./', '../../assets/');
+                    // Use the image path as-is if it starts with /, otherwise fix relative paths
+                    const imagePath = book.image.startsWith('/') 
+                        ? book.image 
+                        : book.image.replace('./', '../../assets/');
                     
                     card.innerHTML = `
                         <img src="${imagePath}" alt="${book.name}">
                         <h3>${book.name}</h3>
-                        <p>${book.price}</p>
+                        <p>$${book.price}</p>
                         <button>Add to Cart</button>
                     `;
                     
                     const button = card.querySelector('button');
-                    button.addEventListener('click', () => addToCart(bookId));
+                    button.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent card click when clicking button
+                        addToCart(bookId);
+                    });
+                    
+                    // Make the whole card clickable (except the button)
+                    card.addEventListener('click', () => {
+                        window.location.href = `../Book_Details/Book.html?id=${bookId}`;
+                    });
                     
                     return card;
                 }
