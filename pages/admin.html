@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Login</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <div class="navbar_container">
+             <div class="logo_container">
+                 <h1 class="logo">BookStore</h1>
+             </div>
+             <div class="menu_container">
+                 <ul class="menu_list">
+                     <li> <a href="../docs/index.html" class="menu_list_item">Home</a></li>
+                     <li> <a href="#" class="menu_list_item">Search books</a></li>
+                     <li> <a href="#" class="menu_list_item">Search authors</a></li>
+                     <li> <a href="#" class="menu_list_item">Kids books</a></li>
+                     <li> <a href="#" class="menu_list_item">E-books</a></li>
+                 </ul>
+                 <div class="search">
+                     <form action="" class="search">
+                         <input type="text" class="search_input" placeholder="  search...">
+                     </form>
+                  </div>
+              </div>
+             <div class="log_in">
+                <a href="login.html"> <button  type="button" class="log_in_button">Log in</button></a>
+             </div>
+         </div>
+       </div> 
+     </header>
+
+    <main class="main-content">
+        <div class="wrapper">
+            <div class="form-header">
+                <div class="titles">
+                    <div class="title-login">ADMIN LOGIN</div>
+                </div>
+                <button class="close-btn">✕</button>
+            </div>
+            <form id="loginForm" action="/login" method="POST" class="login-form" autocomplete="on">
+                <div class="welcome-text">Welcome Back</div>
+                <div class="input-box">
+                    <input  class="input-field" id="log-email" required>
+                    <label for="log-email" class="label">Username</label>
+                    <i class='bx bx-user icon'></i>
+                </div>
+                <div class="input-box">
+                    <input  class="input-field" id="log-email" required>
+                    <label for="log-email" class="label">Id</label>
+                    <i class='bx bx-id-card icon'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" id="log-pass" required>
+                    <label for="log-pass" class="label">Password</label>
+                    <i class='bx bx-lock-alt icon'></i>
+                </div>
+                <div class="input-box">
+                   <button type="submit" class="btn-submit" id="SignInBtn">Sign In</button>
+                </div>
+                <div class="switch-form">
+                    <span>Login as user? <a class="reg" href="login.html">Login</a></span>
+                </div>
+            </form>
+        </div>
+    </main>
